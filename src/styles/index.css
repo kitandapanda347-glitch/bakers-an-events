@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Inter;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Performance optimization for rendering */
+  text-rendering: optimizeSpeed;
+}
+
+* {
+  box-sizing: border-box;
+  line-height: normal;
+  font-family: inherit;
+  margin: unset;
+}
+
+/* Mobile-First Responsive Fixes */
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Prevent horizontal scroll on mobile */
+body, #root {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+/* Ensure all containers respect viewport width */
+.container, section, div {
+  max-width: 100%;
+}
+
+/* Touch target optimization for mobile */
+button, a, input, select, textarea {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Improve image rendering on mobile */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  content-visibility: auto;
+}
+
+/* Performance optimizations for smooth scrolling */
+* {
+  will-change: auto;
+}
+
+/* Optimize images for performance */
+img[loading="lazy"] {
+  content-visibility: auto;
+}
+
+/* Loading spinner animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Prevent text from breaking layout on small screens */
+h1, h2, h3, h4, h5, h6, p, span {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+/* Mobile-friendly focus states */
+*:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Smooth scrolling for hash links */
+html {
+  scroll-padding-top: 80px;
+}
+
+/* Prevent zoom on input focus (iOS) */
+@media screen and (max-width: 768px) {
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea,
+  select {
+    font-size: 16px !important;
+  }
+}
+
+/* Hide scrollbar but keep functionality */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Improved mobile touch targets */
+@media screen and (max-width: 768px) {
+  button, a {
+    min-height: 44px;
+  }
+  
+  /* Better mobile spacing */
+  .btn-shadow {
+    box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Ensure text is readable on mobile */
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}

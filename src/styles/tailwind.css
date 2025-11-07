@@ -1,0 +1,96 @@
+/* Optimized font loading with preconnect for faster loading */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+Pro:wght@300;400;600&family=Montserrat:wght@500;600&family=Dancing+Script:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Core Colors */
+    --color-background: #FEFEFE; /* white */
+    --color-foreground: #2C1810; /* dark-brown */
+    --color-border: #F0E6D6; /* cream-200 */
+    --color-input: #FEFEFE; /* white */
+    --color-ring: #D4A574; /* warm-gold */
+    
+    /* Card Colors */
+    --color-card: #FEFEFE; /* white */
+    --color-card-foreground: #2C1810; /* dark-brown */
+    --color-popover: #FEFEFE; /* white */
+    --color-popover-foreground: #2C1810; /* dark-brown */
+    
+    /* Muted Colors */
+    --color-muted: #F8F6F3; /* warm-cream */
+    --color-muted-foreground: #6B4423; /* medium-brown */
+    
+    /* Brand Colors */
+    --color-primary: #D4A574; /* warm-gold */
+    --color-primary-foreground: #FEFEFE; /* white */
+    --color-secondary: #8B4513; /* rich-brown */
+    --color-secondary-foreground: #FEFEFE; /* white */
+    
+    /* State Colors */
+    --color-destructive: #DC143C; /* crimson */
+    --color-destructive-foreground: #FEFEFE; /* white */
+    --color-accent: #FFD700; /* bright-gold */
+    --color-accent-foreground: #2C1810; /* dark-brown */
+    --color-success: #228B22; /* forest-green */
+    --color-success-foreground: #FEFEFE; /* white */
+    --color-warning: #FF8C00; /* orange */
+    --color-warning-foreground: #FEFEFE; /* white */
+    --color-error: #DC143C; /* crimson */
+    --color-error-foreground: #FEFEFE; /* white */
+    
+    /* Surface Colors */
+    --color-surface: #F8F6F3; /* warm-cream */
+    --color-surface-foreground: #2C1810; /* dark-brown */
+    
+    /* Text Colors */
+    --color-text-primary: #2C1810; /* dark-brown */
+    --color-text-secondary: #6B4423; /* medium-brown */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .font-cta {
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .font-accent {
+    font-family: 'Dancing Script', cursive;
+  }
+}
+
+@layer components {
+  .btn-shadow {
+    box-shadow: 0 4px 12px rgba(212, 165, 116, 0.15);
+  }
+  
+  .card-shadow {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+  
+  .smooth-scroll {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
